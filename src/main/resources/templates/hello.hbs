@@ -1,0 +1,23 @@
+{{#partial "title" }}
+    <title>Hello.hbs</title>
+{{/partial }}
+
+
+{{#partial "main" }}
+    <h1>This is my test Handlebars page</h1>
+
+    {{#if "username"}}
+        <h1>Welcome {{ username }}</h1>
+    {{ else }}
+        <h1>Please, Log In!</h1>
+    {{/if}}
+
+    <form action="/submit" method="post">
+        <input name="username" id="username" placeholder="Enter your username" />
+        <button type="submit" value="Send">This</button>
+
+    </form>
+
+{{/partial }}
+
+{{> template.hbs}}
